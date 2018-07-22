@@ -10,12 +10,12 @@
 
 
     <properties>
-        <apkDir>C:\ToDoList\apk</apkDir>
+        <apkDir>C:\ToDoList\apk\Todoist_v12.8_apkpure.com.apk</apkDir>
         <deviceName>Nexus 5X API 27</deviceName>
         <version>8.1</version>
-        <appPackage>com.todoist</appPackage>
-        <appActivity>com.todoist.activity.HomeActivity</appActivity>
-        <automationName>Appium</automationName>
+        <!--<appPackage>com.todoist</appPackage>-->
+        <!--<appActivity>com.todoist.activity.WelcomeActivity</appActivity>-->
+        <!--<automationName>Appium</automationName>-->
         <fullReset>false</fullReset>
     </properties>
 
@@ -48,9 +48,6 @@
                         <apkDir>${apkDir}</apkDir>
                         <deviceName>${deviceName}</deviceName>
                         <version>${version}</version>
-                        <appPackage>${appPackage}</appPackage>
-                        <appActivity>${appActivity}</appActivity>
-                        <automationName>${automationName}</automationName>
                         <fullReset>${fullReset}</fullReset>
                     </systemPropertyVariables>
                 </configuration>
@@ -65,30 +62,20 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.14.3</version>
+            <version>6.4</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>5.0.4</version>
+            <version>3.4.0</version>
         </dependency>
 
         <dependency>
-            <groupId>ru.yandex.qatools.allure</groupId>
-            <artifactId>allure-testng-adaptor</artifactId>
-            <version>1.4.19</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>junit</groupId>
-                    <artifactId>junit</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>3.10.0</version>
         </dependency>
 
     </dependencies>
