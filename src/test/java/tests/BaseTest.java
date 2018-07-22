@@ -68,7 +68,7 @@ public class BaseTest {
         }catch (InterruptedException e){
             e.fillInStackTrace();
         }
-
+        System.out.println("Server started");
     }
 
     public void quitEmulator(){
