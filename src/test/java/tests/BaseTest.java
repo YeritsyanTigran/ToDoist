@@ -21,7 +21,7 @@ public class BaseTest {
     TouchAction touchAction;
     protected static final String EMAIL = "tikoeritsyan@yandex.com";
     protected static final String USERNAME = "testAppricode";
-    protected static final String PASSWORD = "tikotk61998";
+    protected static final String PASSWORD = "test123!@#";
 
     protected static AndroidDriver driver;
 

@@ -25,7 +25,7 @@ public class TestExample extends BaseTest {
     @Test
     public void test1(){
         String projectName = "TestProject";
-        String projectID;
+        String projectID = "";
 
         try {
            projectID = HttpClient.createProjct(projectName);
@@ -48,6 +48,11 @@ public class TestExample extends BaseTest {
         homePage.clickProjectsDownButton();
         Assert.assertTrue(homePage.checkProject(projectName),"Project isn't present");
 
+        try {
+            HttpClient.deleteProject(projectID);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Test
@@ -81,6 +86,7 @@ public class TestExample extends BaseTest {
         projectPage.clickBackButton();
 
         try {
+            Thread.sleep(5000);
             Assert.assertTrue(HttpClient.checkTask(taskName),String.format("No %s found in %s",taskName,projectName));
             HttpClient.deleteProject(projectID);
         } catch (Exception e) {
